@@ -1,36 +1,74 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
+# Dependencies
+/node_modules/
 /.pnp
-.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# Build output and caches
 /.next/
 /out/
+/build/
+/dist/
+/.cache/
+/.turbo/
+.eslintcache
+.prettiercache
+*.tsbuildinfo
+next-env.d.ts
 
-# production
-/build
+# Test output
+/coverage/
+/test-results/
+/playwright-report/
 
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
+*.log
+*.log.*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# local env files
-.env*.local
-.env
+# Local environment and credentials; keep the shared example
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
 
-# vercel
-.vercel
+# Local deployment state
+/.vercel/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Temporary files and recovery backups
+/tmp/
+/temp/
+/.tmp/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.corrupted-*/
+*.corrupted-*
+
+# Original image exports; the website uses the versioned WebP files
+/public/images/headset-*.png
+/public/images/lifestyle.png
+
+# Local project documentation
+/docs/
+
+# OS and editor leftovers
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+/.idea/
+/.vscode/*.local.json

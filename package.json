@@ -1,0 +1,46 @@
+{
+  "name": "pimolu-headset",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --fix --max-warnings=0",
+    "typecheck": "next typegen && tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:ui": "node scripts/check-pimolu.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run check:ui && npm test"
+  },
+  "dependencies": {
+    "@pimolu/react": "0.1.0-beta.7",
+    "@pimolu/web-styles": "0.1.0-beta.7",
+    "lucide-react": "^1.69.0",
+    "next": "16.4.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.4.5",
+    "prettier": "^3.6.2",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.1"
+    },
+    "eslint": {
+      "minimatch": "^11.0.1"
+    },
+    "@eslint/config-array": {
+      "minimatch": "^11.0.1"
+    }
+  }
+}
