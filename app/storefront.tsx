@@ -687,6 +687,15 @@ export default function Storefront() {
             <Link href="https://pimolu.com/" external showExternalIcon={false}>
               Explore Pimolu <Icon name="arrow-up-right" />
             </Link>
+            <Link
+              href="https://github.com/pimoludev/pimolu-headset"
+              external
+              showExternalIcon={false}
+              aria-label="Pimolu Headset source code on GitHub (opens in a new tab)"
+            >
+              <Image src="/github.svg" alt="" width={16} height={16} />
+              GitHub
+            </Link>
           </Box>
           <Link href="#" className="back-top" aria-label="Back to top">
             <Icon name="arrow-up" />

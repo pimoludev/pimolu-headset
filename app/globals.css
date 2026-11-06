@@ -890,12 +890,21 @@ h2 {
   background: transparent;
   box-shadow: none;
 }
+.newsletter-input .pimolu-input__wrapper:focus-within {
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
 .newsletter-input input {
   font-size: 11px;
   background: transparent;
   border: none;
   height: 44px;
   padding-left: 12px;
+}
+.newsletter-input input:focus-visible {
+  outline: none;
+  outline-offset: 0;
 }
 .newsletter-submit {
   background: var(--ink);
