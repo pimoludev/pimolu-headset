@@ -3,10 +3,12 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    /^https?:\/\//i.test(siteUrl) ? siteUrl : `https://${siteUrl}`,
   ),
   title: "Pimolu Headset — The world on pause. Just you. And music.",
   description:

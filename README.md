@@ -91,7 +91,7 @@ For deployment, copy [`.env.example`](.env.example) to `.env.local` and set the 
 NEXT_PUBLIC_SITE_URL=https://your-domain.example
 ```
 
-The default is `http://localhost:3000`.
+The default is `http://localhost:3000`. Domains without a protocol (for example, `pimolu-headset.pimolu.com`) automatically use `https://`.
 
 ### Production
 
